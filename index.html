@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="init()">
 
     <!-- As a link -->
     <nav class="navbar bg-body-tertiary">
@@ -30,38 +30,45 @@
 
         <div class="card quiz-card">
             <img src="./img/mainPic.jpg" class=" card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Quiz questions</h5>
 
-                <div class="card mb-3">
-                    <div class="card-body">
-                        Answer
+            <div class="card-body" id="endScreen" style="display: none;">
+                Quiz beendet!
+            </div>
+
+            <div class="card-body" id="questionBody">
+                <h5 class="card-title" id="questionText">Quiz Fragen</h5>
+
+
+                <div class="card quiz-answer-card mb-3" onclick="answer('answer_1')">
+                    <div class="card-body" id="answer_1">
+                        Antwort
                     </div>
                 </div>
 
-                <div class="card mb-3">
-                    <div class="card-body">
-                        Answer
+                <div class="card quiz-answer-card mb-3" onclick="answer('answer_2')">
+                    <div class="card-body" id="answer_2">
+                        Antwort
                     </div>
                 </div>
 
-                <div class="card mb-3">
-                    <div class="card-body">
-                        Answer
+                <div class="card quiz-answer-card mb-3" onclick="answer('answer_3')">
+                    <div class="card-body" id="answer_3">
+                        Antwort
                     </div>
                 </div>
 
-                <div class="card mb-3">
-                    <div class="card-body">
-                        Answer
+                <div class="card quiz-answer-card mb-3" onclick="answer('answer_4')">
+                    <div class="card-body" id="answer_4">
+                        Antwort
                     </div>
                 </div>
 
                 <div class="question-footer">
                     <span>
-                        <b>1</b> out <b>5</b> questions
+                        <b id="questionNumber">1</b> von <b id="all-questions">5</b> Fragen
                     </span>
-                    <button class="btn btn-danger">Next question</button>
+                    <button onclick="nextQuestion()" class="btn btn-danger" id="next-button" disabled>Nächste
+                        Frage</button>
                 </div>
 
             </div>

@@ -11,13 +11,22 @@ body {
     align-items: center;
 }
 
-.question-footer{
+.question-footer {
     padding-top: 12px;
-    border-top: 1px solid rgba(0,0,0,0.24);
+    border-top: 1px solid rgba(0, 0, 0, 0.24);
     display: flex;
     justify-content: space-between;
 }
 
-.quiz-card{
+.quiz-card {
     width: 30rem;
+}
+
+.quiz-answer-card:hover {
+    cursor: pointer;
+    background-color: rgba(4, 159, 243, 0.05);
+}
+
+.bg-success, .bg-danger{
+    color: white;
 }
